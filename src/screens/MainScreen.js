@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet, Button, FlatList } from 'react-native'
+import { View, StyleSheet, FlatList } from 'react-native'
 
 import { DATA } from '../data'
 import { Post } from '../components/Post'
@@ -7,7 +7,11 @@ import { Post } from '../components/Post'
 export const MainScreen = ({ navigation }) => {
 
   const openPostHandler = post => {
-    navigation.navigate('Post', { postId: post.id, date: post.date })
+    navigation.navigate('Post', { 
+      postId: post.id, 
+      date: post.date, 
+      booked: post.booked
+    })
   }
 
   return (
@@ -20,7 +24,6 @@ export const MainScreen = ({ navigation }) => {
     </View>
   )
 }
-
 
 const styles = StyleSheet.create({
   wrapper: {

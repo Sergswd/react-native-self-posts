@@ -1,10 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { View, Text, StyleSheet, Image, Button, ScrollView, Alert } from 'react-native'
 import { DATA } from '../data'
 import { THEME } from '../theme'
 
-export const PostScreen = ({ route }) => {
-  // const postId = navigation.getParam('postId')
+export const PostScreen = ({ route, navigation }) => {
   const { postId } = route.params
 
   const post = DATA.find(p => p.id === postId)
