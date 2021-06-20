@@ -29,7 +29,7 @@ export const AppNavigation = () => {
         <Stack.Screen 
           name='Post' 
           component={PostScreen}
-          options={{title: 'пост номер 42'}}
+          options={({ route }) => ({ title: 'Пост от ' + new Date(route.params.date).toLocaleDateString() })}
         />
       </Stack.Navigator>
     </NavigationContainer>
