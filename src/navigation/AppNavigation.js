@@ -19,6 +19,9 @@ export const AppNavigation = () => {
             backgroundColor: Platform.OS === 'android' ? THEME.MAIN_COLOR : '#fff'
           },
           headerTintColor: Platform.OS === 'android' ? '#fff' : THEME.MAIN_COLOR,
+          headerTitleStyle: {
+            fontSize: 14
+          }
         }}
       >
         <Stack.Screen 
